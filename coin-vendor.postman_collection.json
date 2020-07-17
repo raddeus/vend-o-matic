@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "31f1bada-2dee-4d25-8a8a-c57a9c8a5c76",
+		"name": "Coin Vendor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert Coins",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"coin\": 13\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/api",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refund Coins",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"coin\": 1\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/api",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Machine Inventory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/api/inventory",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					]
+				},
+				"description": "Get the machine's inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Item",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "content-type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/api/inventory/0",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"inventory",
+						"0"
+					]
+				},
+				"description": "Get the machine's inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Inventory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/api/user",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "content-type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/api/reset",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "767ba1e3-8f83-4afd-bcfe-0a8874516f7f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e0d298bf-2905-46c5-ab7e-8c85255d408d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "08200f90-2a3a-42c2-8dbc-f4917db76481",
+			"key": "HOST",
+			"value": "http://localhost",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

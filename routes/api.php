@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::namespace('API')->group(function() {
+    Route::put('/', 'MachineController@insertCoins');
+    Route::delete('/', 'MachineController@refundCoins');
+    Route::get('/inventory', 'MachineController@getInventory');
+    Route::put('/inventory/{amount}', 'MachineController@purchaseItem');
+
+    // Utility method for dev
+    Route::delete('reset', 'UtilityController@reset');
+    Route::get('user', 'UserController@show');
+});
+

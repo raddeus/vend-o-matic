@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+  web:
+    build:
+      context: ./docker/web
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/var/www
+    ports:
+      - "80:80"
+    links:
+      - app
+  app:
+    build:
+      context: ./docker/app
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/var/www
+    links:
+      - db
+      - redis
+    environment:
+      - DB_PORT=3306
+      - DB_HOST=db
+  db:
+    build:
+      context: ./docker/db
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./docker/data/mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: coin-vendor
+      MYSQL_USER: user
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+  redis:
+    image: redis:4.0.5-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: redis
+    ports:
+      - "6379:6379"
+
