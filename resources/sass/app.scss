@@ -6,3 +6,73 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.coin-machine {
+  border: 2px solid #DADADA;
+  padding: 5px;
+  .coin-machine-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .coin-machine-title {
+      font-size: 2em;
+    }
+  }
+
+  .coin-machine-item-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .coin-machine-item {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      .coin-machine-item-title {
+        font-size: 2em;
+      }
+      .coin-machine-item-amount {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .coin-machine-coins {
+    font-size: 1.5em;
+    margin-left: 15px;
+  }
+}
