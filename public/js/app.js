@@ -29429,10 +29429,9 @@ var fetchUser = /*#__PURE__*/function () {
 
           case 5:
             data = _context2.sent;
-            console.log(data);
             return _context2.abrupt("return", data);
 
-          case 8:
+          case 7:
           case "end":
             return _context2.stop();
         }
