@@ -41,7 +41,6 @@ html, body {
 }
 
 .coin-machine {
-  border: 2px solid #DADADA;
   padding: 5px;
   .coin-machine-header {
     display: flex;
@@ -57,8 +56,10 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     .coin-machine-item {
       display: flex;
+      margin: 0 5px;
       flex-direction: column;
       padding: 10px;
 

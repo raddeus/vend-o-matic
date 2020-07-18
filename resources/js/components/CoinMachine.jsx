@@ -67,7 +67,7 @@ const CoinMachine = () => {
 
     return (
         <>
-            <div className="coin-machine">
+            <div className="coin-machine card">
                 <div className="coin-machine-header">
                     <div className="coin-machine-title">
                         Vend-O-Matic
@@ -78,7 +78,7 @@ const CoinMachine = () => {
                     {inventory && inventory.map((amt, index) => {
                         const hasSufficientFunds = user && (user['machine']['coins'] >= 2);
                         return (
-                            <div key={index} className="coin-machine-item">
+                            <div key={index} className="coin-machine-item card">
                                 <div className="coin-machine-item-title">
                                     Item #{index}
                                 </div>
@@ -89,6 +89,7 @@ const CoinMachine = () => {
                                     Remaining: {amt}
                                 </div>
                                 <button
+                                    className="btn btn-primary"
                                     disabled={purchaseItemLoading || inventoryLoading || !hasSufficientFunds}
                                     onClick={() => fetchPurchaseItemFromAPI(index)}
                                 >{purchaseItemLoading && purchaseItemIndex === index ? 'Buying...' : 'Buy'}</button>
@@ -109,9 +110,12 @@ const CoinMachine = () => {
                 </div>) : ''}
                 <div>
                     <button
+                        className="btn btn-primary mr-2"
                         disabled={insertCoinLoading}
                         onClick={() => fetchInsertCoinFromAPI()}>{insertCoinLoading ? 'Inserting...' : 'Insert Coin'}</button>
+
                     <button
+                        className="btn btn-secondary"
                         disabled={refundCoinsLoading}
                         onClick={() => fetchRefundCoinsFromAPI()}>{refundCoinsLoading ? 'Refunding...' : 'Refund Coins'}</button>
                 </div>
@@ -119,6 +123,7 @@ const CoinMachine = () => {
             <hr/>
             <div className="user-controls">
                 <button
+                    className="btn btn-danger"
                     disabled={resetAllLoading}
                     onClick={() => fetchResetAllFromAPI()}>{resetAllLoading ? 'Resetting...' : 'RESET ALL'}</button>
 
