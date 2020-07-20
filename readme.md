@@ -1,8 +1,6 @@
-# Coin Vendor
+# Vend-O-Matic
 
 This is a demo laravel app
-
-
 
 ## Running Locally
 
