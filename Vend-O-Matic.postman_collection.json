@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "31f1bada-2dee-4d25-8a8a-c57a9c8a5c76",
-		"name": "Coin Vendor",
+		"name": "Vend-O-Matic",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -45,7 +45,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"coin\": 1\n}"
+					"raw": ""
 				},
 				"url": {
 					"raw": "{{HOST}}/api",
@@ -183,9 +183,9 @@
 	],
 	"variable": [
 		{
-			"id": "08200f90-2a3a-42c2-8dbc-f4917db76481",
+			"id": "a0b899df-a0b8-4105-8f35-beea33d8d0e9",
 			"key": "HOST",
-			"value": "http://localhost",
+			"value": "http://vend-o-matic.raddeus",
 			"type": "string"
 		}
 	],
