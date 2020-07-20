@@ -2,6 +2,8 @@
 
 This is a demo laravel app
 
+https://vend-o-matic.raddeus.com/
+
 ## Running Locally
 
 This app comes with a docker-compose setup that should work out of the box.
