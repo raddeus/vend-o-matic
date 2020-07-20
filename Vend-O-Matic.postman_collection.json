@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"coin\": 13\n}"
+					"raw": "{\n\t\"coin\": 1\n}"
 				},
 				"url": {
 					"raw": "{{HOST}}/api",
@@ -183,9 +183,9 @@
 	],
 	"variable": [
 		{
-			"id": "a0b899df-a0b8-4105-8f35-beea33d8d0e9",
+			"id": "448be1e8-f56d-4159-89ca-d86e04b611b5",
 			"key": "HOST",
-			"value": "http://vend-o-matic.raddeus",
+			"value": "https://vend-o-matic.raddeus.com",
 			"type": "string"
 		}
 	],
